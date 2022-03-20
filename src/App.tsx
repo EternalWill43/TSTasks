@@ -4,6 +4,14 @@ import './App.css';
 import TestShit from './components/TestShit';
 
 function App() {
+
+  interface Task {
+    desc: string,
+    complete?: boolean
+  }
+
+  let myObj: Task[] = [{desc: "KMS", complete: true}, {desc: "TONIGHT"}];
+
   return (
     <div className="App">
       <TestShit/>
