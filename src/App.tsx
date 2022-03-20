@@ -9,16 +9,22 @@ export interface Task {
   complete?: boolean
 }
 
+export interface iTasks {
+  taskList: Task[],
+  taskSetter: React.Dispatch<React.SetStateAction<Task[]>>
+}
+
 function App() {
 
   let myObj: Task[] = [{desc: "LEARN", complete: true}, {desc: "TONIGHT"}];
 
   const [tasks, setTasks] = useState<Task[]>(myObj);
 
+  let wrapper: iTasks = {taskList: tasks, taskSetter: setTasks}
 
   return (
     <div className="App">
-      <TestStuff {...tasks} setTasks={setTasks}/>
+      <TestStuff {...wrapper}/>
     </div>
   );
 }
