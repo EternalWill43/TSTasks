@@ -5,11 +5,11 @@ interface Task {
   complete?: boolean
 }
 
-const TestShit: React.FC<any> = (props) => {
-  console.log(props);
+const TestShit: React.FC<Task[]> = ({...arr}) => {
+  
   return(
     <div>
-      {props.name} is {props.age}
+      {Object.keys(arr).map(data => <p>{arr[data].desc}</p>)}
     </div>
   )
 }

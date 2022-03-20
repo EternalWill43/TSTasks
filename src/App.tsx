@@ -10,13 +10,17 @@ function App() {
     complete?: boolean
   }
 
+  interface props {
+    props: Task[]
+  }
+
+
   let myObj: Task[] = [{desc: "KMDDSl", complete: true}, {desc: "TONIGHT"}];
 
-  console.log(typeof(myObj));
 
   return (
     <div className="App">
-      <TestShit name="Josh" age={10}/>
+      <TestShit {...myObj}/>
     </div>
   );
 }
