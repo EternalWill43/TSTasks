@@ -1,8 +1,16 @@
 import React from 'react'
 
-const TestShit: React.FC<any> = () => {
+interface Task {
+  desc: string,
+  complete: boolean
+}
+
+const TestShit: React.FC<Task[]> = (props) => {
+  console.log(props);
   return(
-    <div>changed.</div>
+    <div>
+      {props.map((data) => <p>{data.desc}</p>)}
+    </div>
   )
 }
 
