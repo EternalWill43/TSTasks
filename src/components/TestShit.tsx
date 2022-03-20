@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function TestShit() {
-  return (
-    <div>Lmfao.</div>
+const TestShit: React.FC<any> = () => {
+  return(
+    <div>changed.</div>
   )
 }
+
+export default TestShit;
