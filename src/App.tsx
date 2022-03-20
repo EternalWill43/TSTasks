@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TestStuff from './components/TestStuff';
+import {useState} from 'react';
 
 function App() {
 
@@ -15,12 +16,14 @@ function App() {
   }
 
 
-  let myObj: Task[] = [{desc: "STDY", complete: true}, {desc: "TONIGHT"}];
+  let myObj: Task[] = [{desc: "LEARN", complete: true}, {desc: "TONIGHT"}];
+
+  const [tasks, setTasks] = useState<Task[]>(myObj);
 
 
   return (
     <div className="App">
-      <TestStuff {...myObj}/>
+      <TestStuff {...tasks}/>
     </div>
   );
 }
