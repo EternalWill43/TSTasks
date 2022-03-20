@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <TestStuff {...tasks}/>
+      <TestStuff {...tasks} setTasks={setTasks}/>
     </div>
   );
 }
