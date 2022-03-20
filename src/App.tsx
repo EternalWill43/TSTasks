@@ -4,17 +4,12 @@ import './App.css';
 import TestStuff from './components/TestStuff';
 import {useState} from 'react';
 
+export interface Task {
+  desc: string,
+  complete?: boolean
+}
+
 function App() {
-
-  interface Task {
-    desc: string,
-    complete?: boolean
-  }
-
-  interface props {
-    props: Task[]
-  }
-
 
   let myObj: Task[] = [{desc: "LEARN", complete: true}, {desc: "TONIGHT"}];
 
