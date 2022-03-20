@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TestShit from './components/TestShit';
+import TestStuff from './components/TestStuff';
 
 function App() {
 
@@ -15,12 +15,12 @@ function App() {
   }
 
 
-  let myObj: Task[] = [{desc: "KMDDSl", complete: true}, {desc: "TONIGHT"}];
+  let myObj: Task[] = [{desc: "STDY", complete: true}, {desc: "TONIGHT"}];
 
 
   return (
     <div className="App">
-      <TestShit {...myObj}/>
+      <TestStuff {...myObj}/>
     </div>
   );
 }
