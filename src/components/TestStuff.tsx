@@ -1,12 +1,15 @@
 import React from 'react';
 import { Task } from '../App';
 import { iTasks } from '../App';
+import uniqid from 'uniqid';
 
-const TestStuff: React.FC<iTasks> = (arr) => {
-  console.log(arr.taskList);
+const TestStuff: React.FC<iTasks> = (props) => {
+  
+  //props.taskSetter([...props.taskList, {desc: "whattata"}])
+
   return(
     <div>
-      {Object.keys(arr.taskList as React.PropsWithChildren<Task[]>).map(data => <p>{arr[data as keyof React.ReactNode]}</p>)}
+      {Object.keys(props['taskList'] as Task[]).map(data => <p key={uniqid()}>{props['taskList'][data as keyof React.ReactNode].desc}</p>)}
     </div>
   )
 }
