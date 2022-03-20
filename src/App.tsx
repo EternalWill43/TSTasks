@@ -10,13 +10,13 @@ function App() {
     complete?: boolean
   }
 
-  let myObj: Task[] = [{desc: "KMS", complete: true}, {desc: "TONIGHT"}];
+  let myObj: Task[] = [{desc: "KMDDSl", complete: true}, {desc: "TONIGHT"}];
 
   console.log(typeof(myObj));
 
   return (
     <div className="App">
-      <TestShit props={myObj}/>
+      <TestShit name="Josh" age={10}/>
     </div>
   );
 }

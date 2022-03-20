@@ -9,7 +9,7 @@ const TestShit: React.FC<any> = (props) => {
   console.log(props);
   return(
     <div>
-      {props.props.map((data: Task) => <p>{data.desc}</p>)}
+      {props.name} is {props.age}
     </div>
   )
 }
