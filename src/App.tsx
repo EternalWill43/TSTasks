@@ -12,6 +12,8 @@ function App() {
 
   let myObj: Task[] = [{desc: "KMS", complete: true}, {desc: "TONIGHT"}];
 
+  console.log(typeof(myObj));
+
   return (
     <div className="App">
       <TestShit props={myObj}/>

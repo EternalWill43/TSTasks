@@ -2,14 +2,14 @@ import React from 'react'
 
 interface Task {
   desc: string,
-  complete: boolean
+  complete?: boolean
 }
 
-const TestShit: React.FC<Task[]> = (props) => {
+const TestShit: React.FC<any> = (props) => {
   console.log(props);
   return(
     <div>
-      {props.map((data) => <p>{data.desc}</p>)}
+      {props.props.map((data: Task) => <p>{data.desc}</p>)}
     </div>
   )
 }
