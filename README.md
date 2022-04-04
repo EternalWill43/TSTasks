@@ -2,7 +2,7 @@
 
 An app to create task cards that are draggable and resize uniformly to match the largest card.
 
-##Demo
+## Demo
 
 https://tmanager.netlify.app/
 
